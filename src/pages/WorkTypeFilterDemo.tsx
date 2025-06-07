@@ -60,16 +60,33 @@ const WorkTypeFilterDemo: React.FC = () => {
             {/* Original Component */}
             <Card>
               <CardHeader>
-                <CardTitle>Original Design Component</CardTitle>
+                <CardTitle>Collapsible Accordion Component</CardTitle>
                 <CardDescription>
-                  Pixel-perfect recreation of the Builder.io design with dark
-                  theme and exact styling
+                  Interactive accordion with collapsible content. Click the
+                  header to expand/collapse.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col items-center space-y-6">
-                <WorkTypeFilter
-                  onSelectionChange={handleOriginalSelectionChange}
-                />
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-700 mb-2">
+                      Default (Collapsed):
+                    </h4>
+                    <WorkTypeFilter
+                      onSelectionChange={handleOriginalSelectionChange}
+                    />
+                  </div>
+
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-700 mb-2">
+                      Default Open:
+                    </h4>
+                    <WorkTypeFilter
+                      onSelectionChange={handleOriginalSelectionChange}
+                      defaultOpen={true}
+                    />
+                  </div>
+                </div>
 
                 <div className="w-full">
                   <h4 className="font-semibold text-gray-800 mb-2">
@@ -94,7 +111,6 @@ const WorkTypeFilterDemo: React.FC = () => {
                 </div>
               </CardContent>
             </Card>
-
             {/* Form Integration */}
             <Card>
               <CardHeader>
