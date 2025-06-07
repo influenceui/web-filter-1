@@ -237,7 +237,7 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
                     aria-label={`${isSelected ? "Unselect" : "Select"} ${agency.name} in ${agency.location}`}
                     aria-pressed={isSelected}
                   >
-                    <div className="flex items-center gap-4 flex-1 border-[0.5px] border-[#555] py-3">
+                    <div className="flex items-center gap-4 flex-1 border-[0.5px] border-[#555] py-3 px-0">
                       <AgencyLogo agency={agency} />
                       <div className="flex flex-col items-start gap-0.5">
                         <div className="flex items-center gap-2">
