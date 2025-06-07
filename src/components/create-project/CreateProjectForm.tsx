@@ -11,7 +11,7 @@ interface CreateProjectFormProps {
 interface ProjectFormData {
   projectName: string;
   deliverables: string;
-  typeOfWork: string[];
+  typeOfWork: string;
   documents: File[];
   projectDescription: string;
   inspirationLinks: string;
