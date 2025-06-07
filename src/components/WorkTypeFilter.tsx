@@ -167,19 +167,24 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
         href="https://fonts.googleapis.com/css2?family=Figtree:wght@400&display=swap"
       />
       <div
-        className={`w-[390px] h-[415px] relative font-['Figtree',-apple-system,Roboto,Helvetica,sans-serif] ${className}`}
+        className={`w-[390px] ${isOpen ? "h-[415px]" : "h-[54px]"} relative font-['Figtree',-apple-system,Roboto,Helvetica,sans-serif] transition-all duration-300 ease-in-out overflow-hidden ${className}`}
         role="region"
         aria-label="Work type filter"
       >
         {/* Header */}
-        <div className="flex px-4 py-[15px] justify-between items-center border-[0.5px] border-[#555] bg-[#0E0E0E] w-[390px] h-[54px] box-border">
+        <button
+          onClick={handleToggle}
+          className="flex px-4 py-[15px] justify-between items-center border-[0.5px] border-[#555] bg-[#0E0E0E] w-[390px] h-[54px] box-border hover:bg-[#1a1a1a] transition-colors duration-200 cursor-pointer"
+          aria-expanded={isOpen}
+          aria-controls="work-type-content"
+        >
           <div className="text-[#E9BF99] font-['Figtree',-apple-system,Roboto,Helvetica,sans-serif] text-sm font-normal leading-[22px]">
             Type of work
           </div>
           <div className="flex items-center gap-4">
-            <DropdownIcon />
+            <DropdownIcon isOpen={isOpen} />
           </div>
-        </div>
+        </button>
 
         {/* Content */}
         <div className="flex w-[390px] h-[361px] py-4 flex-col justify-start items-start gap-4 flex-shrink-0 border-[0.5px] border-[#555] bg-[#0E0E0E] box-border">
