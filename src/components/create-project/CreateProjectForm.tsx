@@ -193,6 +193,10 @@ const CreateProjectForm: React.FC<CreateProjectFormProps> = ({
     handleInputChange("typeOfWork", value);
   };
 
+  const handleDeadlineChange = (value: string) => {
+    handleInputChange("deadline", value);
+  };
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
     handleInputChange("documents", files);
