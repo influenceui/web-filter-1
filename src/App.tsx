@@ -19,7 +19,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/create-project" element={<CreateProjectForm />} />
+          <Route path="/create-project" element={<CreateProjectPage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
