@@ -130,6 +130,7 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [selectedAgencyId, setSelectedAgencyId] = useState<string | null>(null);
 
   const handleClearSearch = () => {
     setSearchTerm("");
