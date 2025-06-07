@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-// Types
-interface WorkType {
+interface IWorkType {
   id: string;
   label: string;
   checked: boolean;
@@ -13,7 +12,6 @@ interface WorkTypeFilterProps {
   defaultOpen?: boolean;
 }
 
-// Icon Components
 const DropdownIcon: React.FC<{ isOpen: boolean }> = ({ isOpen }) => (
   <svg
     width="16"
@@ -96,14 +94,14 @@ const CheckboxUnchecked: React.FC = () => (
   </div>
 );
 
-const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
+const WorkType: React.FC<WorkTypeFilterProps> = ({
   onSelectionChange,
   className = "",
   defaultOpen = false,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(defaultOpen);
-  const [workTypes, setWorkTypes] = useState<WorkType[]>([
+  const [workTypes, setWorkTypes] = useState<IWorkType[]>([
     { id: "all", label: "All", checked: true },
     { id: "branding", label: "Branding", checked: false },
     { id: "packaging", label: "Packaging", checked: false },
@@ -117,7 +115,7 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
   ]);
 
   const handleCheckboxChange = (id: string) => {
-    let updatedWorkTypes: WorkType[];
+    let updatedWorkTypes: IWorkType[];
 
     if (id === "all") {
       // If "All" is clicked, uncheck all others and check "All"
@@ -189,7 +187,7 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
         {/* Content */}
         <div
           id="work-type-content"
-          className={`flex w-[390px] h-[361px] py-4 flex-col justify-start items-start gap-4 flex-shrink-0 border-[0.5px] border-[#555] bg-[#0E0E0E] box-border transition-all duration-300 ease-in-out ${
+          className={`flex w-[390px] max-h-[360px] overflow-y-auto pt-4 flex-col justify-start items-start gap-4 flex-shrink-0 box-content border-[0.5px] border-[#555] bg-[#0E0E0E] transition-all duration-300 ease-in-out ${
             isOpen
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform -translate-y-4 pointer-events-none"
@@ -225,8 +223,8 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
           </div>
 
           {/* Checkbox Grid */}
-          <div className="flex h-[265px] justify-center items-center flex-shrink-0 border-t-[0.5px] border-b-[0.5px] border-[#555] w-[390px]">
-            <div className="flex w-[390px] px-4 flex-col items-start h-[336px] box-border">
+          <div className="flex max-h-[320px] overflow-y-auto justify-center items-center flex-shrink-0 border-t-[0.5px] border-b-[0.5px] border-[#555] w-[390px]">
+            <div className="flex w-[390px] px-4 flex-col items-start box-border">
               {/* Create rows of 2 items each */}
               {Array.from({
                 length: Math.ceil(filteredWorkTypes.length / 2),
@@ -274,4 +272,17 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
   );
 };
 
+const WorkTypeFilter: React.FC = () => {
+	const handleOriginalSelectionChange = (types: string[]) => {
+		console.log("Original component selected types:", types);
+	};
+
+	return (
+		<WorkType
+			onSelectionChange={handleOriginalSelectionChange}
+		/>
+	);
+};
+
 export default WorkTypeFilter;
+

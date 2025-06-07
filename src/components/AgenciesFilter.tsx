@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// Types
 interface Agency {
   id: string;
   name: string;
@@ -61,7 +60,7 @@ const DropdownIcon: React.FC<{ isOpen: boolean }> = ({ isOpen }) => (
     viewBox="0 0 16 9"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className={`w-6 h-6 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+    className={`w-4 h-2 flex-shrink-0 transition-transform duration-200 ${isOpen ? "" : "rotate-180"}`}
   >
     <path
       d="M8.34617 0.292376L16 7.94617L14.9462 9L8.34617 2.4L1.74617 9L0.692349 7.94618L8.34617 0.292376Z"
@@ -101,7 +100,7 @@ const SearchIcon: React.FC = () => (
 const AgencyLogo: React.FC<{ agency: Agency }> = ({ agency }) => (
   <div className="w-16 h-16 relative flex-shrink-0">
     <div
-      className="w-16 h-16 absolute left-0 top-0 flex items-center justify-center"
+      className="w-16 h-16 absolute border-r-[0.5px] border-[#555] left-0 top-0 flex items-center justify-center"
       style={{ backgroundColor: agency.logoBackground || "#FFF" }}
     >
       <img
@@ -164,7 +163,7 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
         href="https://fonts.googleapis.com/css2?family=Figtree:wght@400&family=Cabinet+Grotesk:wght@700&display=swap"
       />
       <div
-        className={`w-[390px] ${isOpen ? "h-[415px]" : "h-[54px]"} relative bg-[#0E0E0E] border-[0.5px] border-[#555] transition-all duration-300 ease-in-out overflow-hidden ${className}`}
+        className={`w-[390px] ${isOpen ? "" : "h-[54px]"} relative bg-[#0E0E0E] border-[0.5px] border-[#555] transition-all duration-300 ease-in-out overflow-hidden ${className}`}
         role="region"
         aria-label="Agencies filter"
       >
@@ -186,7 +185,7 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
         {/* Content */}
         <div
           id="agencies-content"
-          className={`flex w-full py-4 flex-col justify-start items-start gap-4 border-[0.5px] border-[#555] bg-[#0E0E0E] box-border transition-all duration-300 ease-in-out ${
+          className={`flex w-full pt-4 flex-col justify-start items-start gap-4 border-[#555] bg-[#0E0E0E] box-border transition-all duration-300 ease-in-out ${
             isOpen
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform -translate-y-4 pointer-events-none"
@@ -222,7 +221,7 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
           </div>
 
           {/* Agencies List */}
-          <div className="flex w-full justify-center items-start border-[0.5px] border-[#555] flex-col h-[320px] overflow-y-auto">
+          <div className="flex w-full items-start border-t-[0.5px] border-[#555] flex-col max-h-[320px] overflow-y-auto">
             {filteredAgencies.length > 0 ? (
               filteredAgencies.map((agency, index) => {
                 const isSelected = selectedAgencyId === agency.id;
@@ -234,12 +233,12 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
                     onClick={() => handleAgencyClick(agency)}
                     className={`flex px-4 py-0 justify-between items-center w-full border-b-[0.5px] border-[#555] box-border transition-colors cursor-pointer group ${
                       isSelected ? "bg-[#E9BF99]" : "hover:bg-[#555]/10"
-                    } ${isFirst ? "mt-2" : ""} ${isLast ? "mb-2" : ""}`}
+                    } ${isLast ? "mb-2" : ""}`}
                     tabIndex={isOpen ? 0 : -1}
                     aria-label={`${isSelected ? "Unselect" : "Select"} ${agency.name} in ${agency.location}`}
                     aria-pressed={isSelected}
                   >
-                    <div className="flex items-center gap-4 flex-1 border-[0.5px] border-[#555] py-3 px-0">
+                    <div className="flex items-center gap-4 flex-1 border-r-[0.5px] border-l-[0.5px] border-[#555] px-0">
                       <AgencyLogo agency={agency} />
                       <div className="flex flex-col items-start gap-0.5">
                         <div className="flex items-center gap-2">
@@ -282,3 +281,4 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
 };
 
 export default AgenciesFilter;
+
