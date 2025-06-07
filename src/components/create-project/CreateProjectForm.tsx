@@ -178,20 +178,6 @@ const CreateProjectForm: React.FC<CreateProjectFormProps> = ({
     importantNote: "",
   });
 
-  const [isTypeOfWorkOpen, setIsTypeOfWorkOpen] = useState(false);
-
-  const workTypes = [
-    "Branding",
-    "Packaging",
-    "Graphic Design",
-    "Animation",
-    "Photography",
-    "Production",
-    "Post Production",
-    "Social Media",
-    "Marketing",
-  ];
-
   const handleInputChange = (
     field: keyof ProjectFormData,
     value: string | string[] | File[],
@@ -202,13 +188,8 @@ const CreateProjectForm: React.FC<CreateProjectFormProps> = ({
     }));
   };
 
-  const handleTypeOfWorkToggle = (workType: string) => {
-    const currentTypes = formData.typeOfWork;
-    const updatedTypes = currentTypes.includes(workType)
-      ? currentTypes.filter((type) => type !== workType)
-      : [...currentTypes, workType];
-
-    handleInputChange("typeOfWork", updatedTypes);
+  const handleTypeOfWorkChange = (value: string) => {
+    handleInputChange("typeOfWork", value);
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
