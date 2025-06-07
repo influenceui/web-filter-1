@@ -10,6 +10,7 @@ interface WorkType {
 interface WorkTypeFilterProps {
   onSelectionChange?: (selectedTypes: string[]) => void;
   className?: string;
+  defaultOpen?: boolean;
 }
 
 // Icon Components
