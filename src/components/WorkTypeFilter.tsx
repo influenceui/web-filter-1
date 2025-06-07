@@ -99,8 +99,10 @@ const CheckboxUnchecked: React.FC = () => (
 const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
   onSelectionChange,
   className = "",
+  defaultOpen = false,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   const [workTypes, setWorkTypes] = useState<WorkType[]>([
     { id: "all", label: "All", checked: true },
     { id: "branding", label: "Branding", checked: false },
