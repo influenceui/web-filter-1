@@ -14,14 +14,14 @@ interface WorkTypeFilterProps {
 }
 
 // Icon Components
-const DropdownIcon: React.FC = () => (
+const DropdownIcon: React.FC<{ isOpen: boolean }> = ({ isOpen }) => (
   <svg
     width="16"
     height="9"
     viewBox="0 0 16 9"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-4 h-2 flex-shrink-0"
+    className={`w-4 h-2 flex-shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
   >
     <path
       d="M8.34617 0.292376L16 7.94617L14.9462 9L8.34617 2.4L1.74617 9L0.692349 7.94618L8.34617 0.292376Z"
