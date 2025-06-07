@@ -169,7 +169,7 @@ const CreateProjectForm: React.FC<CreateProjectFormProps> = ({
   const [formData, setFormData] = useState<ProjectFormData>({
     projectName: "",
     deliverables: "",
-    typeOfWork: [],
+    typeOfWork: "",
     documents: [],
     projectDescription: "",
     inspirationLinks: "",
