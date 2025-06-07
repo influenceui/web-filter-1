@@ -40,10 +40,10 @@ const Index = () => {
 
         <div className="mt-8">
           <Link
-            to="/work-type-filter"
+            to="/create-project"
             className="inline-flex items-center px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors duration-200"
           >
-            View Work Type Filter Demo
+            View Create Project Demo
           </Link>
         </div>
       </div>
