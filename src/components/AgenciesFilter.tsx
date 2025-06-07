@@ -224,29 +224,47 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
           {/* Agencies List */}
           <div className="flex w-full justify-center items-start border-[0.5px] border-[#555] flex-col h-[320px] overflow-y-auto">
             {filteredAgencies.length > 0 ? (
-              filteredAgencies.map((agency) => (
-                <button
-                  key={agency.id}
-                  onClick={() => handleAgencyClick(agency)}
-                  className="flex px-4 py-0 justify-between items-center w-full border-b-[0.5px] border-[#555] box-border hover:bg-[#555]/10 transition-colors cursor-pointer group"
-                  tabIndex={isOpen ? 0 : -1}
-                  aria-label={`Select ${agency.name} in ${agency.location}`}
-                >
-                  <div className="flex items-center gap-4 flex-1 border-[0.5px] border-[#555] py-3">
-                    <AgencyLogo agency={agency} />
-                    <div className="flex flex-col items-start gap-0.5">
-                      <div className="flex items-center gap-2">
-                        <span className="text-white font-['Cabinet_Grotesk',sans-serif] text-base font-bold leading-[22px] opacity-80 group-hover:opacity-100 transition-opacity">
-                          {agency.name}
+              filteredAgencies.map((agency) => {
+                const isSelected = selectedAgencyId === agency.id;
+                return (
+                  <button
+                    key={agency.id}
+                    onClick={() => handleAgencyClick(agency)}
+                    className={`flex px-4 py-0 justify-between items-center w-full border-b-[0.5px] border-[#555] box-border transition-colors cursor-pointer group ${
+                      isSelected ? "bg-[#E9BF99]" : "hover:bg-[#555]/10"
+                    }`}
+                    tabIndex={isOpen ? 0 : -1}
+                    aria-label={`${isSelected ? "Unselect" : "Select"} ${agency.name} in ${agency.location}`}
+                    aria-pressed={isSelected}
+                  >
+                    <div className="flex items-center gap-4 flex-1 border-[0.5px] border-[#555] py-3">
+                      <AgencyLogo agency={agency} />
+                      <div className="flex flex-col items-start gap-0.5">
+                        <div className="flex items-center gap-2">
+                          <span
+                            className={`font-['Cabinet_Grotesk',sans-serif] text-base font-bold leading-[22px] transition-opacity ${
+                              isSelected
+                                ? "text-black opacity-100"
+                                : "text-white opacity-80 group-hover:opacity-100"
+                            }`}
+                          >
+                            {agency.name}
+                          </span>
+                        </div>
+                        <span
+                          className={`font-['Figtree',sans-serif] text-xs font-normal leading-[14px] transition-opacity ${
+                            isSelected
+                              ? "text-black opacity-100"
+                              : "text-white opacity-80 group-hover:opacity-100"
+                          }`}
+                        >
+                          {agency.location}
                         </span>
                       </div>
-                      <span className="text-white font-['Figtree',sans-serif] text-xs font-normal leading-[14px] opacity-80 group-hover:opacity-100 transition-opacity">
-                        {agency.location}
-                      </span>
                     </div>
-                  </div>
-                </button>
-              ))
+                  </button>
+                );
+              })
             ) : (
               <div className="flex items-center justify-center w-full h-full">
                 <span className="text-white/50 font-['Figtree',sans-serif] text-sm">
