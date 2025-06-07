@@ -222,14 +222,14 @@ const WorkTypeFilterDemo: React.FC = () => {
                     User Experience
                   </h4>
                   <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Collapsible accordion interface</li>
                     <li>• Real-time search filtering</li>
                     <li>• Intuitive checkbox interactions</li>
-                    <li>• Visual feedback and animations</li>
+                    <li>• Smooth expand/collapse animations</li>
+                    <li>• Visual feedback and hover states</li>
                     <li>• Responsive design</li>
-                    <li>• Clear visual hierarchy</li>
                   </ul>
                 </div>
-
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">
                     Accessibility
