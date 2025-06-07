@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Index = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200">
@@ -35,6 +37,15 @@ const Index = () => {
           Watch the chat on the left for updates that might need your attention
           to finish generating
         </p>
+
+        <div className="mt-8">
+          <Link
+            to="/work-type-filter"
+            className="inline-flex items-center px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors duration-200"
+          >
+            View Work Type Filter Demo
+          </Link>
+        </div>
       </div>
     </div>
   );
