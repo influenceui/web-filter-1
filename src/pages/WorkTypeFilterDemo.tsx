@@ -19,6 +19,7 @@ const WorkTypeFilterDemo: React.FC = () => {
     [],
   );
   const [selectedTypesInput, setSelectedTypesInput] = useState<string[]>([]);
+  const [selectedAgency, setSelectedAgency] = useState<any>(null);
 
   // Form state
   const [formData, setFormData] = useState({
