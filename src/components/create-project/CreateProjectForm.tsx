@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ProjectTypeSelect } from "@/components/ui/project-type-select";
+import { CalendarDatePicker } from "@/components/ui/calendar-date-picker";
 
 // Types
 interface CreateProjectFormProps {
