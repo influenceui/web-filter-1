@@ -224,16 +224,17 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
           {/* Agencies List */}
           <div className="flex w-full justify-center items-start border-[0.5px] border-[#555] flex-col h-[320px] overflow-y-auto">
             {filteredAgencies.length > 0 ? (
-              <div className="w-full">
-                {filteredAgencies.map((agency) => {
+              filteredAgencies.map((agency, index) => {
                 const isSelected = selectedAgencyId === agency.id;
+                const isFirst = index === 0;
+                const isLast = index === filteredAgencies.length - 1;
                 return (
                   <button
                     key={agency.id}
                     onClick={() => handleAgencyClick(agency)}
                     className={`flex px-4 py-0 justify-between items-center w-full border-b-[0.5px] border-[#555] box-border transition-colors cursor-pointer group ${
                       isSelected ? "bg-[#E9BF99]" : "hover:bg-[#555]/10"
-                    }`}
+                    } ${isFirst ? "mt-2" : ""} ${isLast ? "mb-2" : ""}`}
                     tabIndex={isOpen ? 0 : -1}
                     aria-label={`${isSelected ? "Unselect" : "Select"} ${agency.name} in ${agency.location}`}
                     aria-pressed={isSelected}
