@@ -152,6 +152,10 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
     setSearchTerm("");
   };
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   const filteredWorkTypes = workTypes.filter((type) =>
     type.label.toLowerCase().includes(searchTerm.toLowerCase()),
   );
