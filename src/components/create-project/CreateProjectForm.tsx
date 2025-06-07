@@ -478,93 +478,10 @@ const CreateProjectForm: React.FC<CreateProjectFormProps> = ({
               </div>
 
               {/* Deadline */}
-              <div
-                style={{
-                  display: "flex",
-                  width: "358px",
-                  flexDirection: "column",
-                  alignItems: "flex-start",
-                  gap: "8px",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "10px",
-                  }}
-                >
-                  <div
-                    style={{
-                      color: "#FFF",
-                      fontFamily:
-                        "'Figtree', -apple-system, Roboto, Helvetica, sans-serif",
-                      fontSize: "14px",
-                      fontStyle: "normal",
-                      fontWeight: "400",
-                      lineHeight: "18px",
-                      opacity: "0.8",
-                    }}
-                  >
-                    Deadline
-                  </div>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    width: "358px",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    gap: "12px",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      padding: "17px 16px",
-                      alignItems: "center",
-                      gap: "10px",
-                      width: "100%",
-                      border: "0.5px solid #555",
-                      background: "#000",
-                      boxSizing: "border-box",
-                      position: "relative",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        flex: "1 0 0",
-                      }}
-                    >
-                      <input
-                        type="date"
-                        value={formData.deadline}
-                        onChange={(e) =>
-                          handleInputChange("deadline", e.target.value)
-                        }
-                        style={{
-                          flex: "1 0 0",
-                          color: formData.deadline ? "#FFF" : "#555",
-                          fontFamily:
-                            "'Figtree', -apple-system, Roboto, Helvetica, sans-serif",
-                          fontSize: "14px",
-                          fontStyle: "normal",
-                          fontWeight: "400",
-                          lineHeight: "22px",
-                          background: "transparent",
-                          border: "none",
-                          outline: "none",
-                        }}
-                        placeholder="Select deadline date"
-                      />
-                      <CalendarIcon />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CalendarDatePicker
+                value={formData.deadline}
+                onChange={handleDeadlineChange}
+              />
 
               {/* Help Text */}
               <div
