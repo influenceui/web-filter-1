@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WorkTypeFilterDemo from "./pages/WorkTypeFilterDemo";
 import CreateProjectForm from "./components/create-project/CreateProjectForm";
+import ProjectTypeSelectDemo from "./pages/ProjectTypeSelectDemo";
 
 const queryClient = new QueryClient();
 
