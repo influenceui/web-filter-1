@@ -258,15 +258,25 @@ const WorkTypeFilterDemo: React.FC = () => {
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">
-                    Original Component
+                    Accordion Component
                   </h4>
-                  <div className="bg-gray-100 p-4 rounded-lg">
-                    <code className="text-sm">
-                      {`<WorkTypeFilter onSelectionChange={(types) => console.log(types)} />`}
-                    </code>
+                  <div className="bg-gray-100 p-4 rounded-lg space-y-2">
+                    <div>
+                      <code className="text-sm block">
+                        {`// Default (collapsed)`}
+                      </code>
+                      <code className="text-sm block">
+                        {`<WorkTypeFilter onSelectionChange={(types) => console.log(types)} />`}
+                      </code>
+                    </div>
+                    <div>
+                      <code className="text-sm block">{`// Default open`}</code>
+                      <code className="text-sm block">
+                        {`<WorkTypeFilter defaultOpen={true} onSelectionChange={handleChange} />`}
+                      </code>
+                    </div>
                   </div>
                 </div>
-
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-2">
                     Form Input Component
