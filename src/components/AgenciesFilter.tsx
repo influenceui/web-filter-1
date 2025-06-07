@@ -222,9 +222,10 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
           </div>
 
           {/* Agencies List */}
-          <div className="flex w-full justify-center items-start border-[0.5px] border-[#555] flex-col h-[320px] overflow-y-auto py-2">
+          <div className="flex w-full justify-center items-start border-[0.5px] border-[#555] flex-col h-[320px] overflow-y-auto">
             {filteredAgencies.length > 0 ? (
-              filteredAgencies.map((agency) => {
+              <div className="w-full">
+                {filteredAgencies.map((agency) => {
                 const isSelected = selectedAgencyId === agency.id;
                 return (
                   <button
