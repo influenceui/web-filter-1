@@ -66,13 +66,13 @@ export const ProjectTypeSelect = React.forwardRef<
       <div
         ref={ref}
         className={cn("relative", className)}
-        style={{ width: "358px", height: "358px" }}
+        style={{ width: "358px", height: "85px" }}
         {...props}
       >
         {/* Input Field Container */}
         <div
           className="flex flex-col items-start gap-2 absolute left-0 top-0"
-          style={{ width: "358px", height: "82px" }}
+          style={{ width: "358px", height: "85px" }}
         >
           {/* Label */}
           <div className="flex items-start gap-2.5">
@@ -141,11 +141,11 @@ export const ProjectTypeSelect = React.forwardRef<
 
             {/* Dropdown Panel */}
             <div
-              className="absolute left-0 z-50 flex flex-col items-start bg-[#0E0E0E] border-b-[0.5px] border-[#555]"
+              className="absolute overflow-y-auto left-0 z-50 flex flex-col items-start bg-[#0E0E0E] border-b-[0.5px] border-[#555]"
               style={{
-                top: "82px",
+                top: "100%",
                 width: "358px",
-                height: "276px",
+                maxHeight: "283px",
               }}
             >
               {PROJECT_TYPES.map((projectType, index) => (
