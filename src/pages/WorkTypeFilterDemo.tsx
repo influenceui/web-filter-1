@@ -63,37 +63,20 @@ const WorkTypeFilterDemo: React.FC = () => {
             version
           </p>
 
-          <div className="grid gap-8 lg:grid-cols-2">
-            {/* Original Component */}
+          <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
+            {/* Work Type Filter Component */}
             <Card>
               <CardHeader>
-                <CardTitle>Collapsible Accordion Component</CardTitle>
+                <CardTitle>Work Type Filter</CardTitle>
                 <CardDescription>
-                  Interactive accordion with collapsible content. Click the
-                  header to expand/collapse.
+                  Interactive accordion with checkbox selection for work types.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col items-center space-y-6">
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">
-                      Default (Collapsed):
-                    </h4>
-                    <WorkTypeFilter
-                      onSelectionChange={handleOriginalSelectionChange}
-                    />
-                  </div>
-
-                  <div>
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">
-                      Default Open:
-                    </h4>
-                    <WorkTypeFilter
-                      onSelectionChange={handleOriginalSelectionChange}
-                      defaultOpen={true}
-                    />
-                  </div>
-                </div>
+                <WorkTypeFilter
+                  onSelectionChange={handleOriginalSelectionChange}
+                  defaultOpen={true}
+                />
 
                 <div className="w-full">
                   <h4 className="font-semibold text-gray-800 mb-2">
@@ -113,6 +96,41 @@ const WorkTypeFilterDemo: React.FC = () => {
                   ) : (
                     <p className="text-gray-500 italic text-sm">
                       No types selected
+                    </p>
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Agencies Filter Component */}
+            <Card>
+              <CardHeader>
+                <CardTitle>Agencies Filter</CardTitle>
+                <CardDescription>
+                  Browse and select from a list of advertising agencies with
+                  search functionality.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-col items-center space-y-6">
+                <AgenciesFilter
+                  onAgencySelect={handleAgencySelect}
+                  defaultOpen={true}
+                />
+
+                <div className="w-full">
+                  <h4 className="font-semibold text-gray-800 mb-2">
+                    Selected Agency:
+                  </h4>
+                  {selectedAgency ? (
+                    <div className="p-3 bg-gray-50 rounded border">
+                      <div className="font-medium">{selectedAgency.name}</div>
+                      <div className="text-sm text-gray-600">
+                        {selectedAgency.location}
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-gray-500 italic text-sm">
+                      No agency selected
                     </p>
                   )}
                 </div>
