@@ -187,7 +187,15 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
         </button>
 
         {/* Content */}
-        <div className="flex w-[390px] h-[361px] py-4 flex-col justify-start items-start gap-4 flex-shrink-0 border-[0.5px] border-[#555] bg-[#0E0E0E] box-border">
+        <div
+          id="work-type-content"
+          className={`flex w-[390px] h-[361px] py-4 flex-col justify-start items-start gap-4 flex-shrink-0 border-[0.5px] border-[#555] bg-[#0E0E0E] box-border transition-all duration-300 ease-in-out ${
+            isOpen
+              ? "opacity-100 transform translate-y-0"
+              : "opacity-0 transform -translate-y-4 pointer-events-none"
+          }`}
+          aria-hidden={!isOpen}
+        >
           {/* Search */}
           <div className="flex px-4 items-center gap-4 w-[390px] h-12 box-border">
             <div className="flex flex-1 relative">
@@ -200,6 +208,7 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full h-12 pl-12 pr-4 bg-black border-[0.5px] border-[#555] text-white text-sm placeholder-white/50 font-['Figtree',-apple-system,Roboto,Helvetica,sans-serif] focus:outline-none focus:ring-1 focus:ring-[#E9BF99]"
                   aria-label="Search work types"
+                  tabIndex={isOpen ? 0 : -1}
                 />
               </div>
             </div>
@@ -208,6 +217,7 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
                 onClick={handleClearSearch}
                 className="text-[#E9BF99] font-['Figtree',-apple-system,Roboto,Helvetica,sans-serif] text-sm font-normal leading-[22px] underline opacity-80 hover:opacity-100 transition-opacity"
                 aria-label="Clear search"
+                tabIndex={isOpen ? 0 : -1}
               >
                 Clear
               </button>
@@ -238,6 +248,7 @@ const WorkTypeFilter: React.FC<WorkTypeFilterProps> = ({
                             onChange={() => handleCheckboxChange(workType.id)}
                             className="sr-only"
                             aria-describedby={`label-${workType.id}`}
+                            tabIndex={isOpen ? 0 : -1}
                           />
                           {workType.checked ? (
                             <CheckboxChecked />
