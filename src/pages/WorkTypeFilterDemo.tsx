@@ -40,6 +40,11 @@ const WorkTypeFilterDemo: React.FC = () => {
     console.log("Input component selected types:", types);
   };
 
+  const handleAgencySelect = (agency: any) => {
+    setSelectedAgency(agency);
+    console.log("Selected agency:", agency);
+  };
+
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
