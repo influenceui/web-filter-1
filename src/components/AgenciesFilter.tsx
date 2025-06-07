@@ -141,7 +141,14 @@ const AgenciesFilter: React.FC<AgenciesFilterProps> = ({
   };
 
   const handleAgencyClick = (agency: Agency) => {
-    onAgencySelect?.(agency);
+    // Toggle selection
+    if (selectedAgencyId === agency.id) {
+      setSelectedAgencyId(null);
+      onAgencySelect?.(null);
+    } else {
+      setSelectedAgencyId(agency.id);
+      onAgencySelect?.(agency);
+    }
   };
 
   const filteredAgencies = agencies.filter(
