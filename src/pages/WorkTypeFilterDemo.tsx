@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WorkTypeFilter from "../components/WorkTypeFilter";
+import AgenciesFilter from "../components/AgenciesFilter";
 import { WorkTypeFilterInput } from "../components/ui/work-type-filter-input";
 import { Button } from "../components/ui/button";
 import {
