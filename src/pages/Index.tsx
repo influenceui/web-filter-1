@@ -63,6 +63,42 @@ const Index = () => {
           >
             View Project Type Selection Demo
           </Link>
+          <Link
+            to="/revision-message"
+            className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-200"
+          >
+            View Revision Message Demo
+          </Link>
+          <Link
+            to="/proposal-message"
+            className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+          >
+            View Proposal Message Demo
+          </Link>
+          <Link
+            to="/ddb-proposal"
+            className="inline-flex items-center px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-200"
+          >
+            View DDB Proposal Demo
+          </Link>
+          <Link
+            to="/delete-project"
+            className="inline-flex items-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200"
+          >
+            View Delete Project Demo
+          </Link>
+          <Link
+            to="/payment-success"
+            className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200"
+          >
+            View Payment Success Demo
+          </Link>
+          <Link
+            to="/incoming-payment"
+            className="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors duration-200"
+          >
+            View Incoming Payment Demo
+          </Link>
         </div>
       </div>
     </div>

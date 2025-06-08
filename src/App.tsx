@@ -20,6 +20,12 @@ import ProjectCreationSuccessPage from "./pages/ProjectCreationSuccessPage";
 import ImageUploadPage from "./pages/ImageUploadPage";
 import MarkProjectCompletedPage from "./pages/MarkProjectCompletedPage";
 import CounterProposalPage from "./pages/CounterProposalPage";
+import RevisionMessagePage from "./pages/RevisionMessagePage";
+import ProposalMessagePage from "./pages/ProposalMessagePage";
+import DDBProposalPage from "./pages/DDBProposalPage";
+import DeleteProjectPage from "./pages/DeleteProjectPage";
+import PaymentSuccessPage from "./pages/PaymentSuccessPage";
+import IncomingPaymentPage from "./pages/IncomingPaymentPage";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +59,12 @@ const App = () => (
             element={<MarkProjectCompletedPage />}
           />
           <Route path="/counter-proposal" element={<CounterProposalPage />} />
+          <Route path="/revision-message" element={<RevisionMessagePage />} />
+          <Route path="/proposal-message" element={<ProposalMessagePage />} />
+          <Route path="/ddb-proposal" element={<DDBProposalPage />} />
+          <Route path="/delete-project" element={<DeleteProjectPage />} />
+          <Route path="/payment-success" element={<PaymentSuccessPage />} />
+          <Route path="/incoming-payment" element={<IncomingPaymentPage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
