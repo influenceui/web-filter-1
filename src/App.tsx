@@ -14,6 +14,7 @@ import BrandDetailsPage from "./pages/BrandDetailsPage";
 import CounterPage from "./pages/CounterPage";
 import QuotationPage from "./pages/QuotationPage";
 import QuotationDetailsPage from "./pages/QuotationDetailsPage";
+import MessagingPage from "./pages/MessagingPage";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/counter" element={<CounterPage />} />
           <Route path="/quotation" element={<QuotationPage />} />
           <Route path="/quotation-details" element={<QuotationDetailsPage />} />
+          <Route path="/messaging" element={<MessagingPage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
