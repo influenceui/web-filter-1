@@ -12,6 +12,14 @@ import EditProjectPage from "./pages/EditProjectPage";
 import ProjectEnquiryPage from "./pages/ProjectEnquiryPage";
 import BrandDetailsPage from "./pages/BrandDetailsPage";
 import CounterPage from "./pages/CounterPage";
+import QuotationPage from "./pages/QuotationPage";
+import QuotationDetailsPage from "./pages/QuotationDetailsPage";
+import MessagingPage from "./pages/MessagingPage";
+import ProjectCompletionPage from "./pages/ProjectCompletionPage";
+import ProjectCreationSuccessPage from "./pages/ProjectCreationSuccessPage";
+import ImageUploadPage from "./pages/ImageUploadPage";
+import MarkProjectCompletedPage from "./pages/MarkProjectCompletedPage";
+import CounterProposalPage from "./pages/CounterProposalPage";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +36,23 @@ const App = () => (
           <Route path="/project-enquiry" element={<ProjectEnquiryPage />} />
           <Route path="/brand-details" element={<BrandDetailsPage />} />
           <Route path="/counter" element={<CounterPage />} />
+          <Route path="/quotation" element={<QuotationPage />} />
+          <Route path="/quotation-details" element={<QuotationDetailsPage />} />
+          <Route path="/messaging" element={<MessagingPage />} />
+          <Route
+            path="/project-completion"
+            element={<ProjectCompletionPage />}
+          />
+          <Route
+            path="/project-creation-success"
+            element={<ProjectCreationSuccessPage />}
+          />
+          <Route path="/image-upload" element={<ImageUploadPage />} />
+          <Route
+            path="/mark-project-completed"
+            element={<MarkProjectCompletedPage />}
+          />
+          <Route path="/counter-proposal" element={<CounterProposalPage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
