@@ -11,6 +11,7 @@ import ProjectTypeSelectDemo from "./pages/ProjectTypeSelectDemo";
 import EditProjectPage from "./pages/EditProjectPage";
 import ProjectEnquiryPage from "./pages/ProjectEnquiryPage";
 import BrandDetailsPage from "./pages/BrandDetailsPage";
+import CounterPage from "./pages/CounterPage";
 
 const queryClient = new QueryClient();
 
