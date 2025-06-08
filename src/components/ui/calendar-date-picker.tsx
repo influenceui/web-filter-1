@@ -29,12 +29,10 @@ const CalendarIcon: React.FC = () => (
 // Left arrow icon
 const LeftArrowIcon: React.FC = () => (
   <svg
-    width="9"
-    height="16"
     viewBox="0 0 9 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-[15px] h-[9px] flex-shrink-0"
+    className="flex-shrink-0"
   >
     <path
       d="M0.292376 7.65383L7.94617 1.25667e-08L9 1.05383L2.4 7.65383L9 14.2538L7.94617 15.3077L0.292376 7.65383Z"
@@ -46,12 +44,10 @@ const LeftArrowIcon: React.FC = () => (
 // Right arrow icon
 const RightArrowIcon: React.FC = () => (
   <svg
-    width="9"
-    height="16"
     viewBox="0 0 9 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="w-[15px] h-[9px] flex-shrink-0"
+    className="flex-shrink-0"
   >
     <path
       d="M8.70762 8.34617L1.05383 16L-4.60642e-08 14.9462L6.6 8.34617L-6.23054e-07 1.74617L1.05382 0.692349L8.70762 8.34617Z"
@@ -225,35 +221,18 @@ export const CalendarDatePicker = React.forwardRef<
 
             {/* Calendar Panel */}
             <div
-              className="absolute top-full mt-1 z-50 flex flex-col items-start bg-[#0E0E0E] border-[0.5px] border-[#555] shadow-[0px_14px_32px_0px_rgba(0,0,0,0.60)]"
+              className="absolute top-full z-50 flex flex-col items-start bg-[#0E0E0E] border-[0.5px] border-[#555] shadow-[0px_14px_32px_0px_rgba(0,0,0,0.60)]"
               style={{
                 width: "358px",
-                height: "432px",
-                gap: "16px",
+                maxHeight: "432px",
               }}
             >
-              {/* Header */}
-              <div className="flex items-start gap-2.5 px-4 pt-4">
-                <div
-                  className="text-white opacity-80"
-                  style={{
-                    fontFamily:
-                      "Figtree, -apple-system, Roboto, Helvetica, sans-serif",
-                    fontSize: "14px",
-                    fontWeight: "400",
-                    lineHeight: "18px",
-                  }}
-                >
-                  Deadline
-                </div>
-              </div>
-
               {/* Month Navigation */}
-              <div className="flex items-center justify-between px-4 w-full">
+              <div className="flex py-4 items-center justify-between px-6 w-full">
                 <button
                   type="button"
                   onClick={handlePrevMonth}
-                  className="w-6 h-6 rotate-90 hover:opacity-80 transition-opacity"
+                  className="w-2 h-2 flex justify-center items-center hover:opacity-80 transition-opacity"
                 >
                   <LeftArrowIcon />
                 </button>
@@ -274,7 +253,7 @@ export const CalendarDatePicker = React.forwardRef<
                 <button
                   type="button"
                   onClick={handleNextMonth}
-                  className="w-6 h-6 -rotate-90 hover:opacity-80 transition-opacity"
+                  className="w-2 h-2 flex justify-center items-center hover:opacity-80 transition-opacity"
                 >
                   <RightArrowIcon />
                 </button>
@@ -282,7 +261,7 @@ export const CalendarDatePicker = React.forwardRef<
 
               {/* Calendar Grid */}
               <div
-                className="border-[0.5px] border-[#555] relative"
+                className="border-t-[0.5px] border-[#555] relative"
                 style={{ width: "358px", height: "286px" }}
               >
                 {/* Day Labels */}
@@ -349,8 +328,8 @@ export const CalendarDatePicker = React.forwardRef<
                         return (
                           <div
                             key={dayIndex}
-                            className="absolute flex flex-col justify-center items-center w-[46px] h-[50px]"
-                            style={{ left: `${-10 + dayIndex * 51}px` }}
+                            className={`absolute flex flex-col justify-center items-center w-[${49 - week}px] h-[50px]`}
+                            style={{ left: `${-10 + dayIndex * 51 - 3}px` }}
                           >
                             {dayNumber && (
                               <>

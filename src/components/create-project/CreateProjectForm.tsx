@@ -424,7 +424,7 @@ const CreateProjectForm: React.FC<CreateProjectFormProps> = ({
                     style={{
                       display: "flex",
                       width: "358px",
-                      height: "178px",
+                      height: "183px",
                       flexDirection: "column",
                       alignItems: "flex-start",
                       gap: "12px",
@@ -476,7 +476,6 @@ const CreateProjectForm: React.FC<CreateProjectFormProps> = ({
                   </div>
                 </div>
               </div>
-
               {/* Deadline */}
               <CalendarDatePicker
                 value={formData.deadline}
