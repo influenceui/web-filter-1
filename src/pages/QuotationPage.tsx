@@ -382,9 +382,9 @@ export default function QuotationPage() {
           </div>
 
           {/* Form Fields Row 1 */}
-          <div className="flex gap-10">
+          <div className="flex gap-10" style={{ width: "756px" }}>
             {/* Comment */}
-            <div className="flex-1" style={{ width: "358px" }}>
+            <div style={{ width: "358px" }}>
               <label
                 style={{
                   fontFamily: "'Figtree', sans-serif",
@@ -397,22 +397,23 @@ export default function QuotationPage() {
               >
                 Comment
               </label>
-              <textarea
+              <input
+                type="text"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 placeholder="Write your message here"
-                className="w-full bg-black border border-[#555] px-4 py-4 text-white placeholder-[#555] resize-none"
+                className="w-full bg-black border border-[#555] px-4 text-[#555] placeholder-[#555]"
                 style={{
                   fontFamily: "'Figtree', sans-serif",
                   fontSize: "14px",
                   lineHeight: "22px",
-                  minHeight: "56px",
+                  height: "56px",
                 }}
               />
             </div>
 
             {/* Need full payment in Advance */}
-            <div className="flex-1">
+            <div style={{ width: "358px" }}>
               <label
                 style={{
                   fontFamily: "'Figtree', sans-serif",
@@ -426,19 +427,23 @@ export default function QuotationPage() {
                 Need full payment in Advance ?{" "}
                 <span style={{ color: "#F65F5F" }}>*</span>
               </label>
-              <div className="flex">
-                <div className="flex items-center gap-2 bg-black border border-[#555] px-4 py-3 flex-1">
-                  <input
-                    type="radio"
-                    id="payment-yes"
-                    name="payment"
-                    value="yes"
-                    checked={needFullPayment === "yes"}
-                    onChange={(e) => setNeedFullPayment(e.target.value)}
-                    className="w-5 h-5 text-[#555] bg-transparent border-[#555] rounded-full"
-                  />
+              <div className="flex" style={{ height: "56px" }}>
+                <div className="flex items-center gap-2 bg-black border border-[#555] px-4 flex-1">
+                  <div
+                    className="w-5 h-5 rounded-full border border-[#555] flex items-center justify-center cursor-pointer"
+                    onClick={() => setNeedFullPayment("yes")}
+                    style={{
+                      backgroundColor:
+                        needFullPayment === "yes" ? "#555" : "transparent",
+                    }}
+                  >
+                    {needFullPayment === "yes" && (
+                      <div className="w-2 h-2 rounded-full bg-[#555]" />
+                    )}
+                  </div>
                   <label
-                    htmlFor="payment-yes"
+                    onClick={() => setNeedFullPayment("yes")}
+                    className="cursor-pointer"
                     style={{
                       fontFamily: "'Figtree', sans-serif",
                       fontSize: "14px",
@@ -449,18 +454,22 @@ export default function QuotationPage() {
                     Yes
                   </label>
                 </div>
-                <div className="flex items-center gap-2 bg-black border border-[#555] border-l-0 px-4 py-3 flex-1">
-                  <input
-                    type="radio"
-                    id="payment-no"
-                    name="payment"
-                    value="no"
-                    checked={needFullPayment === "no"}
-                    onChange={(e) => setNeedFullPayment(e.target.value)}
-                    className="w-5 h-5 text-[#555] bg-transparent border-[#555] rounded-full"
-                  />
+                <div className="flex items-center gap-2 bg-black border border-[#555] border-l-0 px-4 flex-1">
+                  <div
+                    className="w-5 h-5 rounded-full border border-[#555] flex items-center justify-center cursor-pointer"
+                    onClick={() => setNeedFullPayment("no")}
+                    style={{
+                      backgroundColor:
+                        needFullPayment === "no" ? "#555" : "transparent",
+                    }}
+                  >
+                    {needFullPayment === "no" && (
+                      <div className="w-2 h-2 rounded-full bg-[#555]" />
+                    )}
+                  </div>
                   <label
-                    htmlFor="payment-no"
+                    onClick={() => setNeedFullPayment("no")}
+                    className="cursor-pointer"
                     style={{
                       fontFamily: "'Figtree', sans-serif",
                       fontSize: "14px",
@@ -476,9 +485,9 @@ export default function QuotationPage() {
           </div>
 
           {/* Form Fields Row 2 */}
-          <div className="flex gap-10">
+          <div className="flex gap-10" style={{ width: "756px" }}>
             {/* Advance Amount */}
-            <div className="flex-1" style={{ width: "358px" }}>
+            <div style={{ width: "358px" }}>
               <label
                 style={{
                   fontFamily: "'Figtree', sans-serif",
@@ -496,17 +505,18 @@ export default function QuotationPage() {
                 value={advanceAmount}
                 onChange={(e) => setAdvanceAmount(e.target.value)}
                 placeholder="-"
-                className="w-full bg-black border border-[#555] px-4 py-4 text-white placeholder-white"
+                className="w-full bg-black border border-[#555] px-4 text-white placeholder-white"
                 style={{
                   fontFamily: "'Figtree', sans-serif",
                   fontSize: "14px",
                   lineHeight: "22px",
+                  height: "56px",
                 }}
               />
             </div>
 
             {/* GST Included */}
-            <div className="flex-1">
+            <div style={{ width: "358px" }}>
               <label
                 style={{
                   fontFamily: "'Figtree', sans-serif",
@@ -519,19 +529,23 @@ export default function QuotationPage() {
               >
                 GST Included <span style={{ color: "#F65F5F" }}>*</span>
               </label>
-              <div className="flex">
-                <div className="flex items-center gap-2 bg-black border border-[#555] px-4 py-3 flex-1">
-                  <input
-                    type="radio"
-                    id="gst-yes"
-                    name="gst"
-                    value="yes"
-                    checked={gstIncluded === "yes"}
-                    onChange={(e) => setGstIncluded(e.target.value)}
-                    className="w-5 h-5 text-[#555] bg-transparent border-[#555] rounded-full"
-                  />
+              <div className="flex" style={{ height: "56px" }}>
+                <div className="flex items-center gap-2 bg-black border border-[#555] px-4 flex-1">
+                  <div
+                    className="w-5 h-5 rounded-full border border-[#555] flex items-center justify-center cursor-pointer"
+                    onClick={() => setGstIncluded("yes")}
+                    style={{
+                      backgroundColor:
+                        gstIncluded === "yes" ? "#555" : "transparent",
+                    }}
+                  >
+                    {gstIncluded === "yes" && (
+                      <div className="w-2 h-2 rounded-full bg-[#555]" />
+                    )}
+                  </div>
                   <label
-                    htmlFor="gst-yes"
+                    onClick={() => setGstIncluded("yes")}
+                    className="cursor-pointer"
                     style={{
                       fontFamily: "'Figtree', sans-serif",
                       fontSize: "14px",
@@ -542,18 +556,22 @@ export default function QuotationPage() {
                     Yes
                   </label>
                 </div>
-                <div className="flex items-center gap-2 bg-black border border-[#555] border-l-0 px-4 py-3 flex-1">
-                  <input
-                    type="radio"
-                    id="gst-no"
-                    name="gst"
-                    value="no"
-                    checked={gstIncluded === "no"}
-                    onChange={(e) => setGstIncluded(e.target.value)}
-                    className="w-5 h-5 text-[#555] bg-transparent border-[#555] rounded-full"
-                  />
+                <div className="flex items-center gap-2 bg-black border border-[#555] border-l-0 px-4 flex-1">
+                  <div
+                    className="w-5 h-5 rounded-full border border-[#555] flex items-center justify-center cursor-pointer"
+                    onClick={() => setGstIncluded("no")}
+                    style={{
+                      backgroundColor:
+                        gstIncluded === "no" ? "#555" : "transparent",
+                    }}
+                  >
+                    {gstIncluded === "no" && (
+                      <div className="w-2 h-2 rounded-full bg-[#555]" />
+                    )}
+                  </div>
                   <label
-                    htmlFor="gst-no"
+                    onClick={() => setGstIncluded("no")}
+                    className="cursor-pointer"
                     style={{
                       fontFamily: "'Figtree', sans-serif",
                       fontSize: "14px",
@@ -569,9 +587,9 @@ export default function QuotationPage() {
           </div>
 
           {/* Form Fields Row 3 */}
-          <div className="flex gap-10">
+          <div className="flex gap-10" style={{ width: "756px" }}>
             {/* Terms & Conditions */}
-            <div className="flex-1" style={{ width: "358px" }}>
+            <div style={{ width: "358px" }}>
               <label
                 style={{
                   fontFamily: "'Figtree', sans-serif",
@@ -584,7 +602,10 @@ export default function QuotationPage() {
               >
                 Terms & Conditions <span style={{ color: "#F65F5F" }}>*</span>
               </label>
-              <div className="bg-black border border-[#555] px-4 py-4 flex items-center justify-between cursor-pointer hover:bg-[#111]">
+              <div
+                className="bg-black border border-[#555] px-4 flex items-center justify-between cursor-pointer hover:bg-[#111]"
+                style={{ height: "56px" }}
+              >
                 <span
                   style={{
                     fontFamily: "'Figtree', sans-serif",
@@ -600,7 +621,7 @@ export default function QuotationPage() {
             </div>
 
             {/* Important Note */}
-            <div className="flex-1" style={{ width: "358px" }}>
+            <div style={{ width: "358px" }}>
               <label
                 style={{
                   fontFamily: "'Figtree', sans-serif",
@@ -613,27 +634,28 @@ export default function QuotationPage() {
               >
                 Important Note
               </label>
-              <textarea
+              <input
+                type="text"
                 value={importantNote}
                 onChange={(e) => setImportantNote(e.target.value)}
                 placeholder="Write your note here"
-                className="w-full bg-black border border-[#555] px-4 py-4 text-white placeholder-[#555] resize-none"
+                className="w-full bg-black border border-[#555] px-4 text-[#555] placeholder-[#555]"
                 style={{
                   fontFamily: "'Figtree', sans-serif",
                   fontSize: "14px",
                   lineHeight: "22px",
-                  minHeight: "56px",
+                  height: "56px",
                 }}
               />
             </div>
           </div>
 
           {/* Submit Button */}
-          <div className="flex justify-end">
+          <div className="flex justify-end" style={{ width: "756px" }}>
             <button
               className="bg-[#E9BF99] text-[#0E0E0E] px-4 py-4 hover:bg-[#E9BF99]/90 transition-colors"
               style={{
-                width: "358px",
+                width: "756px",
                 height: "56px",
                 fontFamily: "'Cabinet Grotesk', sans-serif",
                 fontSize: "24px",
