@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import WorkTypeFilterDemo from "./pages/WorkTypeFilterDemo";
 import CreateProjectPage from "./pages/CreateProjectPage";
 import ProjectTypeSelectDemo from "./pages/ProjectTypeSelectDemo";
+import EditProjectPage from "./pages/EditProjectPage";
 
 const queryClient = new QueryClient();
 
