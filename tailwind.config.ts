@@ -26,6 +26,8 @@ export default {
         "message-bg-dark": "#28251E",
         "message-bg-medium": "#50483B",
         "message-accent": "#E9BF99",
+        "success-green": "#83C778",
+        "success-bg": "rgba(131, 199, 120, 0.4)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

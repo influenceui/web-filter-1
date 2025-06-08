@@ -87,6 +87,12 @@ const Index = () => {
           >
             View Delete Project Demo
           </Link>
+          <Link
+            to="/payment-success"
+            className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200"
+          >
+            View Payment Success Demo
+          </Link>
         </div>
       </div>
     </div>
