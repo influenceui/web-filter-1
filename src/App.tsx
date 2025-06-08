@@ -18,6 +18,7 @@ import MessagingPage from "./pages/MessagingPage";
 import ProjectCompletionPage from "./pages/ProjectCompletionPage";
 import ProjectCreationSuccessPage from "./pages/ProjectCreationSuccessPage";
 import ImageUploadPage from "./pages/ImageUploadPage";
+import MarkProjectCompletedPage from "./pages/MarkProjectCompletedPage";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,10 @@ const App = () => (
             element={<ProjectCreationSuccessPage />}
           />
           <Route path="/image-upload" element={<ImageUploadPage />} />
+          <Route
+            path="/mark-project-completed"
+            element={<MarkProjectCompletedPage />}
+          />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
