@@ -19,6 +19,7 @@ import ProjectCompletionPage from "./pages/ProjectCompletionPage";
 import ProjectCreationSuccessPage from "./pages/ProjectCreationSuccessPage";
 import ImageUploadPage from "./pages/ImageUploadPage";
 import MarkProjectCompletedPage from "./pages/MarkProjectCompletedPage";
+import CounterProposalPage from "./pages/CounterProposalPage";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ const App = () => (
             path="/mark-project-completed"
             element={<MarkProjectCompletedPage />}
           />
+          <Route path="/counter-proposal" element={<CounterProposalPage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
