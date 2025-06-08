@@ -9,6 +9,7 @@ import WorkTypeFilterDemo from "./pages/WorkTypeFilterDemo";
 import CreateProjectPage from "./pages/CreateProjectPage";
 import ProjectTypeSelectDemo from "./pages/ProjectTypeSelectDemo";
 import EditProjectPage from "./pages/EditProjectPage";
+import ProjectEnquiryPage from "./pages/ProjectEnquiryPage";
 
 const queryClient = new QueryClient();
 
