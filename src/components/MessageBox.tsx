@@ -5,6 +5,7 @@ interface MessageBoxProps {
   amount: string;
   message: string;
   hasCounterDetails?: boolean;
+  detailsText?: string;
   className?: string;
 }
 
@@ -13,6 +14,7 @@ export default function MessageBox({
   amount,
   message,
   hasCounterDetails = false,
+  detailsText = "Counter details",
   className = "",
 }: MessageBoxProps) {
   return (
@@ -43,7 +45,7 @@ export default function MessageBox({
             <div className="flex items-start self-stretch relative">
               <div className="flex items-center gap-[10px] flex-1 relative">
                 <div className="text-white font-normal text-xs leading-5 relative">
-                  Counter details
+                  {detailsText}
                 </div>
               </div>
               <div className="text-message-accent font-normal text-xs leading-[14px] underline relative cursor-pointer hover:text-message-accent/80 transition-colors">
