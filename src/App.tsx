@@ -21,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/create-project" element={<CreateProjectPage />} />
+          <Route path="/edit-project" element={<EditProjectPage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
