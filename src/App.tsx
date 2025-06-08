@@ -6,7 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import WorkTypeFilterDemo from "./pages/WorkTypeFilterDemo";
-import CreateProjectForm from "./components/create-project/CreateProjectForm";
+import CreateProjectPage from "./pages/CreateProjectPage";
+import ProjectTypeSelectDemo from "./pages/ProjectTypeSelectDemo";
+import EditProjectPage from "./pages/EditProjectPage";
+import ProjectEnquiryPage from "./pages/ProjectEnquiryPage";
+import BrandDetailsPage from "./pages/BrandDetailsPage";
+import CounterPage from "./pages/CounterPage";
 
 const queryClient = new QueryClient();
 
@@ -18,7 +23,15 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/create-project" element={<CreateProjectForm />} />
+          <Route path="/create-project" element={<CreateProjectPage />} />
+          <Route path="/edit-project" element={<EditProjectPage />} />
+          <Route path="/project-enquiry" element={<ProjectEnquiryPage />} />
+          <Route path="/brand-details" element={<BrandDetailsPage />} />
+          <Route path="/counter" element={<CounterPage />} />
+          <Route
+            path="/project-type-demo"
+            element={<ProjectTypeSelectDemo />}
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

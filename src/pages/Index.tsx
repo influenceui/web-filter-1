@@ -38,12 +38,30 @@ const Index = () => {
           to finish generating
         </p>
 
-        <div className="mt-8">
+        <div className="mt-8 flex flex-col gap-4">
           <Link
             to="/create-project"
             className="inline-flex items-center px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors duration-200"
           >
             View Create Project Demo
+          </Link>
+          <Link
+            to="/edit-project"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+          >
+            View Edit Project Demo
+          </Link>
+          <Link
+            to="/project-enquiry"
+            className="inline-flex items-center px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors duration-200"
+          >
+            View Project Enquiry Demo
+          </Link>
+          <Link
+            to="/project-type-demo"
+            className="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors duration-200"
+          >
+            View Project Type Selection Demo
           </Link>
         </div>
       </div>
