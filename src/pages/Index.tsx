@@ -75,6 +75,12 @@ const Index = () => {
           >
             View Proposal Message Demo
           </Link>
+          <Link
+            to="/ddb-proposal"
+            className="inline-flex items-center px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors duration-200"
+          >
+            View DDB Proposal Demo
+          </Link>
         </div>
       </div>
     </div>

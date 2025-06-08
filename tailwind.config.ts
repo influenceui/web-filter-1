@@ -20,6 +20,7 @@ export default {
     extend: {
       fontFamily: {
         figtree: ["Figtree", "sans-serif"],
+        cabinet: ["Cabinet Grotesk", "sans-serif"],
       },
       colors: {
         "message-bg-dark": "#28251E",
