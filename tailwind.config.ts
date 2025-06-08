@@ -18,7 +18,13 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        figtree: ["Figtree", "sans-serif"],
+      },
       colors: {
+        "message-bg-dark": "#28251E",
+        "message-bg-medium": "#50483B",
+        "message-accent": "#E9BF99",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
