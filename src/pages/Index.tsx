@@ -63,6 +63,12 @@ const Index = () => {
           >
             View Project Type Selection Demo
           </Link>
+          <Link
+            to="/revision-message"
+            className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-200"
+          >
+            View Revision Message Demo
+          </Link>
         </div>
       </div>
     </div>

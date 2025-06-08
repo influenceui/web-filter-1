@@ -20,6 +20,7 @@ import ProjectCreationSuccessPage from "./pages/ProjectCreationSuccessPage";
 import ImageUploadPage from "./pages/ImageUploadPage";
 import MarkProjectCompletedPage from "./pages/MarkProjectCompletedPage";
 import CounterProposalPage from "./pages/CounterProposalPage";
+import RevisionMessagePage from "./pages/RevisionMessagePage";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
             element={<MarkProjectCompletedPage />}
           />
           <Route path="/counter-proposal" element={<CounterProposalPage />} />
+          <Route path="/revision-message" element={<RevisionMessagePage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
