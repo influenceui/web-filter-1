@@ -15,7 +15,6 @@ export default function ProposalMessagePage() {
           title="You proposed"
           amount="₹ 55,000/-"
           message="Hi Adidas,
-
 We've reviewed your project brief and crafted a detailed quotation based on your requirements for the Speed Runner campaign. Please find the attached quotation document for your review. We're excited to collaborate!"
           hasCounterDetails={true}
           detailsText="Quotation details"
