@@ -25,6 +25,7 @@ import ProposalMessagePage from "./pages/ProposalMessagePage";
 import DDBProposalPage from "./pages/DDBProposalPage";
 import DeleteProjectPage from "./pages/DeleteProjectPage";
 import PaymentSuccessPage from "./pages/PaymentSuccessPage";
+import IncomingPaymentPage from "./pages/IncomingPaymentPage";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +64,7 @@ const App = () => (
           <Route path="/ddb-proposal" element={<DDBProposalPage />} />
           <Route path="/delete-project" element={<DeleteProjectPage />} />
           <Route path="/payment-success" element={<PaymentSuccessPage />} />
+          <Route path="/incoming-payment" element={<IncomingPaymentPage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}

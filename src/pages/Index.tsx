@@ -93,6 +93,12 @@ const Index = () => {
           >
             View Payment Success Demo
           </Link>
+          <Link
+            to="/incoming-payment"
+            className="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors duration-200"
+          >
+            View Incoming Payment Demo
+          </Link>
         </div>
       </div>
     </div>
