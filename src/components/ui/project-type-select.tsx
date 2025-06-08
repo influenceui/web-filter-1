@@ -65,14 +65,14 @@ export const ProjectTypeSelect = React.forwardRef<
       />
       <div
         ref={ref}
-        className={cn("relative", className)}
-        style={{ width: "358px", height: "85px" }}
+        className={cn("relative w-full", className)}
+        style={{ maxWidth: "458px", height: "85px" }}
         {...props}
       >
         {/* Input Field Container */}
         <div
-          className="flex flex-col items-start gap-2 absolute left-0 top-0"
-          style={{ width: "358px", height: "85px" }}
+          className="flex flex-col w-full items-start gap-2 absolute left-0 top-0"
+          style={{ maxWidth: "458px", height: "85px" }}
         >
           {/* Label */}
           <div className="flex items-start gap-2.5">
@@ -141,10 +141,10 @@ export const ProjectTypeSelect = React.forwardRef<
 
             {/* Dropdown Panel */}
             <div
-              className="absolute overflow-y-auto left-0 z-50 flex flex-col items-start bg-[#0E0E0E] border-b-[0.5px] border-[#555]"
+              className="absolute w-full overflow-y-auto left-0 z-50 flex flex-col items-start bg-[#0E0E0E] border-b-[0.5px] border-[#555]"
               style={{
                 top: "100%",
-                width: "358px",
+                maxWidth: "458px",
                 maxHeight: "283px",
               }}
             >
