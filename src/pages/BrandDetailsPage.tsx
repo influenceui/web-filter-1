@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 interface FormData {
   signUpAs: string;
-  emailAddress: string;
   keyPersonName: string;
+  emailAddress: string;
   mobileNumber: string;
   ownerName: string;
   aboutBrand: string;
@@ -17,8 +17,8 @@ interface FormData {
 const BrandDetailsPage = () => {
   const [formData, setFormData] = useState<FormData>({
     signUpAs: "Brand",
-    emailAddress: "adidasbrand@gmail.com",
     keyPersonName: "Deven Patil",
+    emailAddress: "adidasbrand@gmail.com",
     mobileNumber: "9876543210",
     ownerName: "Adi Dassler",
     aboutBrand: "reate visually stunning and emotionally impactful films.",
@@ -235,7 +235,7 @@ const BrandDetailsPage = () => {
                   </div>
                 </div>
 
-                {/* Email Address */}
+                {/* Key Person Name */}
                 <div
                   style={{
                     display: "flex",
@@ -266,7 +266,7 @@ const BrandDetailsPage = () => {
                         position: "relative",
                       }}
                     >
-                      <span>Email Adress</span>
+                      <span>Key Person Name</span>
                       <span style={{ color: "#F65F5F" }}>*</span>
                     </div>
                   </div>
@@ -293,10 +293,10 @@ const BrandDetailsPage = () => {
                       }}
                     >
                       <input
-                        type="email"
-                        value={formData.emailAddress}
+                        type="text"
+                        value={formData.keyPersonName}
                         onChange={(e) =>
-                          handleInputChange("emailAddress", e.target.value)
+                          handleInputChange("keyPersonName", e.target.value)
                         }
                         style={{
                           flex: "1 0 0",
@@ -315,6 +315,100 @@ const BrandDetailsPage = () => {
                           outline: "none",
                         }}
                       />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Email Address */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    gap: "24px",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      width: "358px",
+                      flexDirection: "column",
+                      alignItems: "flex-start",
+                      gap: "8px",
+                      position: "relative",
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "10px",
+                        position: "relative",
+                      }}
+                    >
+                      <div
+                        style={{
+                          color: "#FFF",
+                          fontFamily: "'Figtree',sans-serif",
+                          fontSize: "14px",
+                          fontStyle: "normal",
+                          fontWeight: "400",
+                          lineHeight: "18px",
+                          opacity: "0.8",
+                          position: "relative",
+                        }}
+                      >
+                        <span>Email Adress</span>
+                        <span style={{ color: "#F65F5F" }}>*</span>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        width: "358px",
+                        flexDirection: "column",
+                        alignItems: "flex-start",
+                        gap: "12px",
+                        position: "relative",
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: "flex",
+                          padding: "17px 16px",
+                          alignItems: "center",
+                          gap: "10px",
+                          alignSelf: "stretch",
+                          border: "0.5px solid #555",
+                          position: "relative",
+                          background: "#000",
+                        }}
+                      >
+                        <input
+                          type="email"
+                          value={formData.emailAddress}
+                          onChange={(e) =>
+                            handleInputChange("emailAddress", e.target.value)
+                          }
+                          style={{
+                            flex: "1 0 0",
+                            color: "#FFF",
+                            fontFamily: "'Figtree',sans-serif",
+                            fontSize: "14px",
+                            fontStyle: "normal",
+                            fontWeight: "400",
+                            lineHeight: "22px",
+                            position: "relative",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "10px",
+                            background: "transparent",
+                            border: "none",
+                            outline: "none",
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -429,116 +523,6 @@ const BrandDetailsPage = () => {
                         }}
                       />
                     </div>
-                  </div>
-                </div>
-
-                {/* Key Person Name */}
-                <div
-                  style={{
-                    width: "358px",
-                    height: "102px",
-                    position: "relative",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      width: "358px",
-                      flexDirection: "column",
-                      alignItems: "flex-start",
-                      gap: "8px",
-                      position: "relative",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: "10px",
-                        position: "relative",
-                      }}
-                    >
-                      <div
-                        style={{
-                          color: "#FFF",
-                          fontFamily: "'Figtree',sans-serif",
-                          fontSize: "14px",
-                          fontStyle: "normal",
-                          fontWeight: "400",
-                          lineHeight: "18px",
-                          opacity: "0.8",
-                          position: "relative",
-                        }}
-                      >
-                        <span>Key Person Name</span>
-                        <span style={{ color: "#F65F5F" }}>*</span>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        width: "358px",
-                        flexDirection: "column",
-                        alignItems: "flex-start",
-                        gap: "12px",
-                        position: "relative",
-                      }}
-                    >
-                      <div
-                        style={{
-                          display: "flex",
-                          padding: "17px 16px",
-                          alignItems: "center",
-                          gap: "10px",
-                          alignSelf: "stretch",
-                          border: "0.5px solid #555",
-                          position: "relative",
-                          background: "#000",
-                        }}
-                      >
-                        <input
-                          type="text"
-                          value={formData.keyPersonName}
-                          onChange={(e) =>
-                            handleInputChange("keyPersonName", e.target.value)
-                          }
-                          style={{
-                            flex: "1 0 0",
-                            color: "#FFF",
-                            fontFamily: "'Figtree',sans-serif",
-                            fontSize: "14px",
-                            fontStyle: "normal",
-                            fontWeight: "400",
-                            lineHeight: "22px",
-                            position: "relative",
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "10px",
-                            background: "transparent",
-                            border: "none",
-                            outline: "none",
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      color: "#555",
-                      fontFamily: "'Figtree',sans-serif",
-                      fontSize: "12px",
-                      fontStyle: "normal",
-                      fontWeight: "400",
-                      lineHeight: "16px",
-                      opacity: "0.8",
-                      position: "absolute",
-                      left: "0px",
-                      top: "86px",
-                      width: "256px",
-                      height: "16px",
-                    }}
-                  >
-                    (Please separate multiple names with a comma)
                   </div>
                 </div>
 
@@ -1201,6 +1185,26 @@ const BrandDetailsPage = () => {
                   Submit
                 </button>
               </div>
+            </div>
+
+            {/* Helper text positioned absolutely */}
+            <div
+              style={{
+                color: "#555",
+                fontFamily: "'Figtree',sans-serif",
+                fontSize: "12px",
+                fontStyle: "normal",
+                fontWeight: "400",
+                lineHeight: "16px",
+                opacity: "0.8",
+                position: "absolute",
+                left: "0px",
+                top: "232px",
+                width: "256px",
+                height: "16px",
+              }}
+            >
+              (Please separate multiple names with a comma)
             </div>
           </div>
         </div>
