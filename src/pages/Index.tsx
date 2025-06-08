@@ -46,6 +46,18 @@ const Index = () => {
             View Create Project Demo
           </Link>
           <Link
+            to="/edit-project"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+          >
+            View Edit Project Demo
+          </Link>
+          <Link
+            to="/project-enquiry"
+            className="inline-flex items-center px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors duration-200"
+          >
+            View Project Enquiry Demo
+          </Link>
+          <Link
             to="/project-type-demo"
             className="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors duration-200"
           >
