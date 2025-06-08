@@ -17,11 +17,11 @@ export default function MessageBox({
 }: MessageBoxProps) {
   return (
     <div
-      className={`flex flex-col justify-end items-end gap-[-0.5px] w-[318px] h-[291px] font-['Figtree'] ${className}`}
+      className={`flex flex-col justify-end items-end w-[318px] h-[291px] font-figtree ${className}`}
     >
-      <div className="flex flex-col justify-end items-end gap-[-0.5px] self-stretch relative">
+      <div className="flex flex-col justify-end items-end self-stretch relative">
         {/* Header Section */}
-        <div className="flex p-3 justify-between items-center self-stretch border-[0.5px] border-white/40 bg-[#28251E] relative">
+        <div className="flex p-3 justify-between items-center self-stretch border-[0.5px] border-white/40 bg-message-bg-dark relative">
           <div className="text-white/60 font-normal text-base leading-6 relative">
             {title}
           </div>
@@ -31,7 +31,7 @@ export default function MessageBox({
         </div>
 
         {/* Message Body */}
-        <div className="flex p-3 justify-center items-center gap-2 self-stretch border-[0.5px] border-white/40 bg-[#50483B] relative">
+        <div className="flex p-3 justify-center items-center gap-2 self-stretch border-[0.5px] border-white/40 bg-message-bg-medium relative">
           <div className="text-white font-normal text-xs leading-5 whitespace-pre-line flex-1 relative">
             {message}
           </div>
@@ -39,14 +39,14 @@ export default function MessageBox({
 
         {/* Counter Details Section */}
         {hasCounterDetails && (
-          <div className="flex py-[14px] px-3 flex-col items-start self-stretch border-[0.5px] border-white/40 bg-[#50483B] relative">
+          <div className="flex py-[14px] px-3 flex-col items-start self-stretch border-[0.5px] border-white/40 bg-message-bg-medium relative">
             <div className="flex items-start self-stretch relative">
               <div className="flex items-center gap-[10px] flex-1 relative">
                 <div className="text-white font-normal text-xs leading-5 relative">
                   Counter details
                 </div>
               </div>
-              <div className="text-[#E9BF99] font-normal text-xs leading-[14px] underline relative cursor-pointer hover:text-[#d4a885] transition-colors">
+              <div className="text-message-accent font-normal text-xs leading-[14px] underline relative cursor-pointer hover:text-message-accent/80 transition-colors">
                 View
               </div>
             </div>
