@@ -13,6 +13,7 @@ import ProjectEnquiryPage from "./pages/ProjectEnquiryPage";
 import BrandDetailsPage from "./pages/BrandDetailsPage";
 import CounterPage from "./pages/CounterPage";
 import QuotationPage from "./pages/QuotationPage";
+import QuotationDetailsPage from "./pages/QuotationDetailsPage";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/brand-details" element={<BrandDetailsPage />} />
           <Route path="/counter" element={<CounterPage />} />
           <Route path="/quotation" element={<QuotationPage />} />
+          <Route path="/quotation-details" element={<QuotationDetailsPage />} />
           <Route
             path="/project-type-demo"
             element={<ProjectTypeSelectDemo />}
