@@ -16,6 +16,7 @@ import QuotationPage from "./pages/QuotationPage";
 import QuotationDetailsPage from "./pages/QuotationDetailsPage";
 import MessagingPage from "./pages/MessagingPage";
 import ProjectCompletionPage from "./pages/ProjectCompletionPage";
+import ProjectCreationSuccessPage from "./pages/ProjectCreationSuccessPage";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,10 @@ const App = () => (
           <Route
             path="/project-completion"
             element={<ProjectCompletionPage />}
+          />
+          <Route
+            path="/project-creation-success"
+            element={<ProjectCreationSuccessPage />}
           />
           <Route
             path="/project-type-demo"
