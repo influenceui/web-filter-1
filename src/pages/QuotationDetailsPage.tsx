@@ -472,7 +472,7 @@ export default function QuotationDetailsPage() {
           {/* Form Fields Row 1 */}
           <div className="flex gap-10" style={{ width: "756px" }}>
             {/* Need full payment in Advance */}
-            <div className="flex flex-col items-center gap-2 flex-1">
+            <div className="flex flex-col items-start gap-2 flex-1">
               <div
                 style={{
                   color: "#FFF",
@@ -487,8 +487,8 @@ export default function QuotationDetailsPage() {
                 <span>Need full payment in Advance ?</span>
                 <span style={{ color: "#F65F5F" }}>*</span>
               </div>
-              <div className="flex justify-center items-center flex-1 self-stretch">
-                <div className="flex items-center gap-2 bg-black border border-[#555] px-4 flex-1 self-stretch">
+              <div className="flex self-stretch" style={{ height: "56px" }}>
+                <div className="flex items-center gap-2 bg-black border border-[#555] px-4 flex-1">
                   <div className="w-6 h-6 relative">
                     {/* Unselected Radio Button */}
                     <svg
@@ -517,7 +517,7 @@ export default function QuotationDetailsPage() {
                     Yes
                   </div>
                 </div>
-                <div className="flex items-center gap-2 bg-black border border-[#555] border-l-0 px-4 flex-1 self-stretch">
+                <div className="flex items-center gap-2 bg-black border border-[#555] border-l-0 px-4 flex-1">
                   <div className="w-6 h-6 relative">
                     {/* Selected Radio Button */}
                     <svg
@@ -566,13 +566,14 @@ export default function QuotationDetailsPage() {
                 <span style={{ color: "#F65F5F" }}>*</span>
               </div>
               <div
-                className="bg-black border border-[#555] px-4 py-4 flex items-center"
+                className="bg-black border border-[#555] px-4 flex items-center"
                 style={{
                   color: "#FFF",
                   fontFamily: "'Figtree', sans-serif",
                   fontSize: "14px",
                   fontWeight: "400",
                   lineHeight: "22px",
+                  height: "56px",
                 }}
               >
                 ₹ 10,000
@@ -583,7 +584,7 @@ export default function QuotationDetailsPage() {
           {/* Form Fields Row 2 */}
           <div className="flex gap-10" style={{ width: "756px" }}>
             {/* GST Applicable */}
-            <div className="flex flex-col items-center gap-2 flex-1">
+            <div className="flex flex-col items-start gap-2 flex-1">
               <div
                 style={{
                   color: "#FFF",
@@ -598,8 +599,8 @@ export default function QuotationDetailsPage() {
                 <span>GST Applicable</span>
                 <span style={{ color: "#F65F5F" }}>*</span>
               </div>
-              <div className="flex justify-center items-center flex-1 self-stretch">
-                <div className="flex items-center gap-2 bg-black border border-[#555] px-4 flex-1 self-stretch">
+              <div className="flex self-stretch" style={{ height: "56px" }}>
+                <div className="flex items-center gap-2 bg-black border border-[#555] px-4 flex-1">
                   <div className="w-6 h-6 relative">
                     {/* Selected Radio Button */}
                     <svg
@@ -628,7 +629,7 @@ export default function QuotationDetailsPage() {
                     Yes
                   </div>
                 </div>
-                <div className="flex items-center gap-2 bg-black border border-[#555] border-l-0 px-4 flex-1 self-stretch">
+                <div className="flex items-center gap-2 bg-black border border-[#555] border-l-0 px-4 flex-1">
                   <div className="w-6 h-6 relative">
                     {/* Unselected Radio Button */}
                     <svg
@@ -676,7 +677,10 @@ export default function QuotationDetailsPage() {
                 <span>Terms & Conditions</span>
                 <span style={{ color: "#F65F5F" }}>*</span>
               </div>
-              <div className="bg-black border border-[#555] px-4 py-4 flex items-center justify-between">
+              <div
+                className="bg-black border border-[#555] px-4 flex items-center justify-between"
+                style={{ height: "56px" }}
+              >
                 <div
                   style={{
                     color: "#FFF",
@@ -711,13 +715,14 @@ export default function QuotationDetailsPage() {
                 Important Note
               </div>
               <div
-                className="bg-black border border-[#555] px-4 py-4 flex items-center"
+                className="bg-black border border-[#555] px-4 flex items-center"
                 style={{
                   color: "#FFF",
                   fontFamily: "'Figtree', sans-serif",
                   fontSize: "14px",
                   fontWeight: "400",
                   lineHeight: "22px",
+                  height: "56px",
                 }}
               >
                 Request you to pay in the form of cheque.
