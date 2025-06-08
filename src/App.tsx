@@ -10,6 +10,7 @@ import CreateProjectPage from "./pages/CreateProjectPage";
 import ProjectTypeSelectDemo from "./pages/ProjectTypeSelectDemo";
 import EditProjectPage from "./pages/EditProjectPage";
 import ProjectEnquiryPage from "./pages/ProjectEnquiryPage";
+import BrandDetailsPage from "./pages/BrandDetailsPage";
 
 const queryClient = new QueryClient();
 
